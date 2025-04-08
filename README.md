@@ -50,7 +50,7 @@ A comprehensive web application for managing cruise ship operations, enabling vo
 ### Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/cruise-ship-management.git
+git clone https://github.com/Prudvi337/cruise-ship-management
 cd cruise-ship-management
 ```
 
