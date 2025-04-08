@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 98%;
+    --foreground: 210 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 10%;
+
+    --primary: 210 100% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 60% 57%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 90%;
+    --muted-foreground: 210 40% 40%;
+
+    --accent: 49 65% 85%;
+    --accent-foreground: 210 50% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 100% 32%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 100% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 200 60% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 50% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 50% 25%;
+    --sidebar-ring: 200 60% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom classes */
+.wave-animation {
+  @apply relative overflow-hidden;
+}
+
+.wave-animation::after {
+  @apply content-[''] absolute bottom-0 left-0 right-0 h-1 bg-ocean-light opacity-70;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-ocean-dark via-ocean to-ocean-light;
+}
+
+.naval-separator {
+  @apply flex items-center before:content-[''] before:h-px before:flex-1 before:bg-ocean-light after:content-[''] after:h-px after:flex-1 after:bg-ocean-light;
+}
+
+.naval-separator::before,
+.naval-separator::after {
+  opacity: 0.3;
+}
